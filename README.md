@@ -1,52 +1,110 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# FarmConnect - Agricultural Supervisor Mobile App
 
-# Getting Started
+A comprehensive React Native mobile application for agricultural field management and supervision.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## ✨ Features Implemented
 
-## Step 1: Start Metro
+### 🏠 Dashboard (Home Screen)
+- ✅ **Real-time Attendance Tracking** with check-in/check-out
+- ✅ Live elapsed timer (HH:MM:SS format)
+- ✅ Statistics dashboard (Fields, Labour, Vehicles, Area)
+- ✅ Field visit summary
+- ✅ Interactive field maps
+- ✅ Reporting officer contact
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### 👥 Labour Management
+- ✅ View all labours with search and filter
+- ✅ Status filtering (Active, Inactive, On Leave)
+- ✅ Direct call functionality
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### 🚜 Vehicles & Tasks
+- ✅ Vehicle management with status tracking
+- ✅ Vehicle scheduling modal
+- ✅ Task management (Create, Update, Complete)
+- ✅ Priority and status indicators
 
-```sh
-# Using npm
+### 🗺️ Field Visits
+- ✅ Pending and completed visit tracking
+- ✅ Visit statistics dashboard
+- ✅ Interactive visit cards
+
+### 📝 Requests System
+- ✅ Submit and track requests
+- ✅ Category-based organization
+- ✅ Priority levels
+- ✅ Status tracking (Pending, Approved, Rejected)
+
+### 👤 Profile & Settings
+- ✅ User profile management
+- ✅ Settings menu
+- ✅ Logout functionality
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js >= 20
+- React Native development environment
+- iOS: Xcode and CocoaPods (optional)
+- Android: Android Studio
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# For iOS (if running on Mac)
+cd ios && pod install && cd ..
+
+# Start Metro
 npm start
 
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
+# Run on Android
 npm run android
 
-# OR using Yarn
-yarn android
+# Run on iOS (Mac only)
+npm run ios
 ```
 
-### iOS
+## 🔐 Demo Credentials
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```
+Supervisor ID: SUP001
+Password: admin123
 ```
 
-Then, and every time you update your native dependencies, run:
+## 📱 Tech Stack
 
-```sh
-bundle exec pod install
+- React Native 0.83.1
+- TypeScript
+- React Navigation 6.x
+- React Native Paper
+- AsyncStorage
+- React Native Maps
+- React Native Toast Message
+
+## 📂 Project Structure
+
 ```
+src/
+├── components/     # Reusable UI components
+├── context/        # Auth context
+├── navigation/     # Navigation setup
+├── screens/        # All app screens
+├── types/          # TypeScript types
+└── utils/          # Helpers and mock data
+```
+
+## 🎨 Design
+
+- Custom bottom tab bar with elevated center button
+- Green theme (#10b981)
+- Material Design principles
+- Smooth animations
+
+---
+
+**Built for Agricultural Management**
 
 For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
 
