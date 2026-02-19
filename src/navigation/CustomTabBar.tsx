@@ -8,16 +8,10 @@ import { colors, spacing, typography, shadows } from '../utils/theme';
 const CustomTabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation }) => {
   const getIconName = (routeName: string) => {
     switch (routeName) {
-      case 'TasksTab':
-        return 'clipboard-list';
-      case 'HarvestTab':
-        return 'qrcode-scan';
+      case 'LeadsTab':
+        return 'file-document-outline';
       case 'HomeTab':
         return 'home';
-      case 'RequestTab':
-        return 'file-document';
-      case 'ProfileTab':
-        return 'account';
       default:
         return 'circle';
     }
@@ -25,16 +19,10 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigat
 
   const getTabLabel = (routeName: string) => {
     switch (routeName) {
-      case 'TasksTab':
-        return 'Tasks';
-      case 'HarvestTab':
-        return 'Harvest';
+      case 'LeadsTab':
+        return 'Leads';
       case 'HomeTab':
         return 'Home';
-      case 'RequestTab':
-        return 'Request';
-      case 'ProfileTab':
-        return 'Profile';
       default:
         return routeName;
     }

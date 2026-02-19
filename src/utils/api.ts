@@ -254,3 +254,33 @@ export const updateTaskStatus = async (payload: UpdateTaskStatusRequest): Promis
   const url = `${BASE_URL}/admin_all_task/update_task_status`;
   return apiRequest(url, 'POST', payload);
 };
+
+// ── Lead / Land-Mapping APIs ────────────────────────────────
+
+export interface LeadCreationRequest {
+  supervisor_id: string;
+  points: Array<{ latitude: number; longitude: number }>;
+  basic_details?: Record<string, any>;
+}
+
+export interface CreateLeadResponse {
+  success?: boolean;
+  lead_id?: string;
+  message?: string;
+}
+
+export const createLead = async (payload: LeadCreationRequest): Promise<CreateLeadResponse> => {
+  const url = `${BASE_URL}/lead_making/create_lead`;
+  return apiRequest(url, 'POST', payload);
+};
+
+export interface GetMyLeadsResponse {
+  data?: any[];
+  leads?: any[];
+}
+
+export const getMyLeads = async (supervisorId: string): Promise<GetMyLeadsResponse> => {
+  const id = typeof supervisorId === 'string' ? supervisorId.trim() : '';
+  const url = `${BASE_URL}/lead_making/get_my_leads/${encodeURIComponent(id)}`;
+  return apiRequest(url, 'GET');
+};
